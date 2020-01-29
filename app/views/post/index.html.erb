@@ -1,0 +1,32 @@
+<div id="notice"><%= notice %></div>
+
+<div class="ui fluid container">
+  <h1>Listing Posts</h1>
+
+  <div class="ui cards">
+    <% @posts.each do |post| %>
+      <div class="ui raised card">
+        <div class="content">
+          <div class="header"><%= post.title %></div>
+          <div class="description"><p><%= post.text %></p></div>
+        </div>
+        <% if logged_in? %>  
+          <div class="extra content">
+              <div class="left floated author">
+                  <%= post.created_at.strftime("%d %b %Y at %H:%M UTC") %>
+              </div>
+              <div class="right floated author"><%= post.user.name %></div>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+
+  <br>
+  <%= paginate @posts %>
+  <br>
+</div>
+
+
+
+
