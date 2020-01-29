@@ -3,7 +3,7 @@
 
 		<h1 class="ui header">Sign-in</h1>
 		
-		<%= form_with scope: :session, url: login_path, class: 'ui large form', local: true do |f| %>
+		<%= form_for(:session, url: login_path) do |f| %>
 			<div class="ui stacked segment">
 
 				<div class="field">
