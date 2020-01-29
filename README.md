@@ -1,4 +1,4 @@
-# Project: Building with Responsive Design
+# Project: Authentication
 
 
 ## [Collaborative Project]
